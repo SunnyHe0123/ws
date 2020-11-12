@@ -6,7 +6,7 @@ pipeline {
   }
 
     stages {
-      stage('build') {
+      stage('build22') {
         steps {
             bat 'mvn --version'
 
@@ -17,7 +17,7 @@ pipeline {
         }
       }
 
-      stage('test') {
+      stage('test33') {
               steps {
                   bat 'mvn --version'
 
