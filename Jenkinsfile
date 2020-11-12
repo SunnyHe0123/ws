@@ -11,13 +11,23 @@ pipeline {
         steps {
             bat 'mvn --version'
 
-            bat 'echo "Hello World!!!!"'
+            bat 'run compile"'
             bat '''
-                echo "Multiline shell steps works too"
-                ls -lah
+                mvn clean compile
             '''
         }
       }
+
+      stage('test') {
+              steps {
+                  bat 'mvn --version'
+
+                  bat 'echo "Run test"'
+                  bat '''
+                      mvn clean test
+                  '''
+              }
+            }
     }
 
 }
