@@ -1,7 +1,6 @@
 pipeline {
   agent any
 
-
   tools {
     jdk 'JDK1.8'
   }
@@ -11,7 +10,7 @@ pipeline {
         steps {
             bat 'mvn --version'
 
-            bat 'run compile"'
+            bat 'echo "run compile"'
             bat '''
                 mvn clean compile
             '''
